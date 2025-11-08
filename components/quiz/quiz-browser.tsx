@@ -21,34 +21,67 @@ interface Quiz {
 const SAMPLE_QUIZZES: Quiz[] = [
   {
     id: "quiz-1",
-    title: "Understanding Diabetes Quiz",
-    description: "Test your knowledge on diabetes types, symptoms, and management.",
+    title: "Understanding Heart Failure Basics",
+    description: "Test your knowledge on heart failure fundamentals: types, causes, and early warning signs.",
     lessonId: "1",
     questions: 10,
     difficulty: "Beginner",
-    estimatedTime: 5,
-    completed: true,
-    score: 90,
+    estimatedTime: 8,
+    completed: false,
+    score: undefined,
   },
   {
     id: "quiz-2",
-    title: "Heart Health Assessment",
-    description: "Evaluate your understanding of cardiovascular health and prevention.",
+    title: "Heart Failure Medications",
+    description: "Evaluate your understanding of medications used to treat heart failure and their mechanisms.",
     lessonId: "2",
     questions: 12,
+    difficulty: "Intermediate",
+    estimatedTime: 10,
+    completed: false,
+    score: undefined,
+  },
+  {
+    id: "quiz-3",
+    title: "Sodium and Fluid Management",
+    description: "Test your knowledge on managing sodium intake and fluid restrictions for heart failure.",
+    lessonId: "3",
+    questions: 10,
+    difficulty: "Beginner",
+    estimatedTime: 7,
+    completed: false,
+    score: undefined,
+  },
+  {
+    id: "quiz-4",
+    title: "Symptom Recognition and Monitoring",
+    description: "Assess your ability to recognize heart failure symptoms and know when to seek help.",
+    lessonId: "4",
+    questions: 12,
+    difficulty: "Intermediate",
+    estimatedTime: 9,
+    completed: false,
+    score: undefined,
+  },
+  {
+    id: "quiz-5",
+    title: "Exercise and Lifestyle Management",
+    description: "Test your knowledge on safe exercise guidelines and lifestyle modifications for heart failure.",
+    lessonId: "5",
+    questions: 10,
     difficulty: "Intermediate",
     estimatedTime: 8,
     completed: false,
     score: undefined,
   },
   {
-    id: "quiz-3",
-    title: "Medication Management Challenge",
-    description: "Advanced quiz on proper medication administration and interactions.",
-    lessonId: "3",
+    id: "quiz-6",
+    title: "Advanced Heart Failure Concepts",
+    description: "Challenge yourself with advanced topics including ejection fraction, advanced treatments, and complications.",
+    lessonId: "8",
     questions: 15,
     difficulty: "Advanced",
-    estimatedTime: 10,
+    estimatedTime: 12,
     completed: false,
     score: undefined,
   },
@@ -70,8 +103,8 @@ export default function QuizBrowser({ onSelectQuiz }: { onSelectQuiz: (id: strin
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-3xl font-bold text-foreground">Health Quizzes</h1>
-              <p className="text-muted-foreground mt-1">Test your knowledge and track your learning</p>
+              <h1 className="text-3xl font-bold text-[#140F4B]">Heart Failure Quizzes</h1>
+              <p className="text-[#140F4B] mt-1">Test your knowledge of heart failure management and track your learning</p>
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-primary">
