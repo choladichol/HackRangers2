@@ -23,12 +23,20 @@ export default function MedicalSearch() {
       const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY!)
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" })
 
-      const prompt = `
-        Explain the medical term "${term}". 
-        Provide a concise definition and why it is clinically important. 
-        Use JSON format:
-        { "Term": "...", "Meaning": "...", "Why": "..." }
-      `
+    const prompt = `
+    You are a helpful AI medical assistant.
+
+    If the user input ("${term}") is a **medical term or short phrase**, respond strictly in JSON format:
+    {
+    "Term": "...",
+    "Meaning": "...",
+    "Why": "..."
+    }
+
+    If the input is a **question or general medical inquiry**, respond naturally in short paragraphs suitable for a patient or student.
+    Keep responses concise and factual.
+    `
+      
 
       const response = await model.generateContent(prompt)
       const text = response.response.text()
